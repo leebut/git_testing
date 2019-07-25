@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Technical Document - Free Code Camp Project Challenge</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Side Nav -->
+  <nav id="navbar">
+    <header>
+      CSS Flexbox
+    </header>
+    <ul>
+      <li><a href="#display:_flex;" class="nav-link">display: flex;</a></li>
+      <li><a href="#flex-direction:" class="nav-link">flex-direction:</a></li>
+      <li><a href="#justify-content:" class="nav-link">justify-content:</a></li>
+      <li><a href="#align-items:" class="nav-link">align-items:</a></li>
+      <li><a href="#flex-wrap:" class="nav-link">flex-wrap:</a></li>
+    </ul>
+  </nav>
+  <main id="main-doc">
+    <section class="main-section" id="display:_flex;">
+      <header>
+        display: flex;
+      </header>
+      <div class="spacer"></div>
+      <div class="section-inner">
+        <p><code>display: flex;</code> instructs the browser to convert a <code>div</code> element into a flex. <br> Look at the following example:</p>
+
+        <p>CSS code:</p>
+        <div class="code-block">
+          <code>
+            <span class="css-selector">.container</span> {<br>
+              &nbsp; <span class="tag">display:</span> <span class="css-attribute">flex;</span><br>
+            } <br>
+          </code>
+        </div>
+        <br>
+        <p>HTML code:</p>
+        <div class="code-block">
+          <code>
+            <span class="tag">&lt;div class="<span class="css-attribute">container</span>"></span><br>
+            &nbsp; This is a flex container <br>
+            <span class="tag">&lt;/div></span> 
+          </code>
+        </div>
+        </div>
+    </section>
+    <section class="main-section" id="flex-direction:">
+      <header>
+        flex-direction:
+      </header>
+      <div class="spacer"></div>
+      <div class="section-inner">
+        <p>The flex direction determines the direction of the main and cross axes.</p>
+        <p>This can be a little confusing, as when the desired result is two columns, you will set the <code>flex-direction</code> to <code>row</code> so that the element can be divided horizonatally. Conversely, setting <code>flex-direction: column;</code> will set a vertical main axis, and items will be added along it.<br>
+        The following code creates a 50-50 horizontal split of the flex container.</p> 
+          <p>CSS code:</p>
+          <div class="code-block">
+            <code>
+             <span class="css-selector">.container</span> {<br>
+                &nbsp; <span class="tag">display</span>: <span class="css-attribute">flex</span>;<br>
+                &nbsp; <span class="tag">flex-direction</span>: <span class="css-attribute">row</span>;<br>
+                &nbsp; <span class="tag">width</span>: <span class="css-attribute">100vw</span>;<br>
+              } <br>
+              <span class="css-selector">.col</span> {<br>
+                &nbsp; <span class="tag">width</span>: <span class="css-attribute">50%</span>;<br>
+              }<br>
+              <span class="css-selector">.left-col</span> {<br>
+              &nbsp; <span class="tag">background</span>: <span class="css-attribute">yellow</span>;<br>
+            }<br>
+            <span class="css-selector">.right-col</span> {<br>
+              &nbsp; <span class="tag">background</span>: <span class="css-attribute">blue</span>;<br>
+            }
+            </code>
+          </div><br><br>
+          <p>HTML code:</p>
+          <code>
+            &lt;div class="container"><br>
+            &nbsp; &lt;div class="col left-col"><br>
+            &nbsp; &nbsp; Left column<br> 
+            &nbsp; &lt;/div><br>
+            &nbsp; &lt;div class="col right-col"><br>
+            &nbsp; &nbsp; Right column<br> 
+            &nbsp; &lt;/div><br>
+            &lt;/div>
+          </code>
+          </div>
+     </section>
+     <section class="main-section" id="justify-content:">
+        <header>
+          justify-content:
+        </header>
+        <div class="spacer"></div>
+        <div class="section-inner">
+        <p><code>justify-content:</code> aligns flex items along the main axis. The items can be aligned using the following attributes:</p>
+        
+        <ul>
+          <li><code>flex-start</code> - aligns items to the left of the container</li>
+          <li><code>center</code> - centers the items horizonatally</li>
+          <li><code>flex-end</code> - aligns the items to the right of the container</li>
+          <li><code>space-between</code> - calculates space between each flex item and pushes the outermost items to the container's edges.</li>
+          <li><code>space-around</code> - similar to space between, but also adds space between the outermost items and the edges.</li>
+          <li><code>self</code> - allows alignment of a single element</li>
+        </ul>
+        </div>
+     </section>
+     <section class="main-section" id="align-items:">
+      <header>
+        align-items:
+      </header>
+      <div class="spacer"></div>
+      <div class="section-inner">
+      <p><code>align-items:</code> aligns flex items along the cross axis. The items can be aligned using the following attributes:</p>
+      
+      <ul>
+        <li><code>flex-start</code> - aligns items to the top of the container</li>
+        <li><code>center</code> - centers the items vertically</li>
+        <li><code>flex-end</code> - aligns the items to the bottom of the container</li>
+        <li><code>space-between</code> - calculates space between each flex item and pushes the outermost items to the container's vertical edges.</li>
+        <li><code>space-around</code> - similar to space between, but also adds space between the outermost items and the vertical edges.</li>
+        <li><code>self</code> - allows alignment of a single element</li>
+      </ul>
+      </div>
+   </section>
+   <section class="main-section" id="flex-wrap:">
+    <header>
+      flex-wrap:
+    </header>
+    <div class="spacer"></div>
+    <div class="section-inner">
+    <p><code>flex-wrap:</code> forces flex items to <em>wrap</em> onto a new row if there is no more room in the viewport. This property can be used is some cases to avoid the use of breakpoints.</p>
+    
+    <p>Without <code>flex-wrap: wrap;</code> the flex items would continue to be squashed as the viewport size shrinks.</p>
+    </div>
+ </section>     
+  </main>
+
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> 
+</body>
+</html>

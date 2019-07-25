@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+nav {
+  float: left;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 300px;
+  background: rgb(205, 255, 212);
+  box-shadow: 5px 5px 5px #777777;
+}
+.nav-div {
+  border-top: solid 2px #723700;
+ 
+}
+#navbar ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+#navbar ul li {
+  border-top: solid 1px #723700;
+}
+.nav-link {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #3f1e00;
+  transition: all .7s;
+}
+.nav-link:hover {
+  background: yellow;
+}
+main {
+  margin-left: 290px;
+  transition: all 0.5s;
+}
+header {
+  font-size: 1.5em;
+  font-weight: 400;
+  width: 100%;
+  background: linear-gradient(90deg, #ffa44e, 25%, rgba(255, 255, 255, 0));
+  padding: 5px 15px;
+  margin-top: 25px;
+}
+.main-section {
+  margin-left: 30px;
+}
+.main-section ul {
+  margin-left: 15px;
+}
+.spacer {
+  height: 10px;
+}
+code {
+  font-size: 1.1em;
+  font-family: 'Courier New', Courier, monospace;
+  color: rgb(0, 75, 160);
+}
+
+p {
+  margin-bottom: 10px;
+}
+.section-inner {
+  background: #dddddd;
+  border: solid 5px #777777;
+  padding: 5px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+  width: 70%;
+  overflow: auto;
+}
+.code-block {
+  background: #2b2b2b;
+  width: max-content;
+  max-height: 400px;
+  overflow: auto;
+  border-radius: 3px;
+  padding: 5px;
+  margin: 0 5px 0 5px;
+}
+.code-block code { 
+  color: rgb(201, 201, 201);
+  font-size: 1.1em;
+  font-family: 'Courier New', Courier, monospace;
+}
+.tag {
+  color: rgb(255, 235, 119);
+}
+.css-selector {
+  color: rgb(255, 152, 255);
+}
+.css-attribute {
+  color: rgb(168, 198, 255);
+}
+@media screen and (max-width: 800px) {
+  nav {
+    transform: translateX(-293px);
+    transition: all 0.5s;
+    animation: inout 10s infinite;
+  }
+  @keyframes inout {
+    50% {
+      background-color: red;
+    }
+  }
+  nav:hover {
+    transform: translateX(0);
+    animation: inout none;
+    opacity: 0.85;
+    cursor: pointer;
+  }
+  main, .main-section { 
+    margin: 0;
+  }
+  #main-doc {
+    width: 95%;
+  }
+  .section-inner {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  main {
+    width: 85%;
+  }
+}
